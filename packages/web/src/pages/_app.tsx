@@ -1,3 +1,4 @@
+import { APP_NAME } from '@gh/constants';
 import '@gh/styles/globals.css';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { AppProps } from 'next/app';
@@ -19,7 +20,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
 	return (
 		<>
 			<Head>
-				<title>GitHub</title>
+				<title>{APP_NAME}</title>
 			</Head>
 			<div className={`${geistSans.className} ${geistMono.className} bg-neutral-900 text-neutral-100`}>
 				<QueryClientProvider client={new QueryClient()}>
